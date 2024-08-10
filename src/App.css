@@ -15,7 +15,9 @@ body,html{
   /* align-items:center; */
 }
 
-
+:root{
+    --random: #FF69B4;
+}
 addGmailRes ul li, p{
 
     color:gray;
@@ -69,4 +71,24 @@ img{
 .image-Slider .img{
     width:60px;
     height:90px;
+}
+
+.func ul li, .points ul li{
+    display:flex;
+    /* align-items:center; */
+    gap:5px;
+}
+
+.projectVisitBtn:hover{
+    background-color:var(--random)
+}
+.projectActive{
+    background-color:var(--random);
+    color:#fff;
+}
+.projects_name ul li{
+    display:flex;
+    align-items:center;
+    margin-bottom:3px;
+    padding:3px 3px;
 }

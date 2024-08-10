@@ -1,82 +1,43 @@
-import { projectsData } from "../projectData";
+import { projectsData, randColor } from "../projectData";
 import { useState } from "react";
+import { ProjectPreview } from "./ProjectPreview";
+import { Link } from "react-router-dom";
 
 export function Project() {
-  let [prev, setPrev] = useState([]);
+  // let [data, setData] = useState(``);
+  var r = document.querySelector(":root");
+  let [prev, setPrev] = useState(projectsData[0]);
+  // let [bgColor , setBgColor] = useState(randColor[0])
   function renderProjects(e) {
     let clickTool = e.target.innerText;
-
     projectsData.map((tools, ind) => {
       if (tools.name == clickTool) {
+        //setiing tool to preview wala object
         setPrev(tools);
-        console.log("megha");
-      }
 
-      // console.log(tools.name)
+        //generating random color for list background
+        let randomNumber = Math.floor(Math.random() * randColor.length);
+        let randomColor = randColor[randomNumber];
+        r.style.setProperty("--random", `${randomColor}`);
+        /// seting active list
+
+        document.querySelector(".projectActive").classList.remove("projectActive")
+
+ e.target.classList.add("projectActive")
+      }
     });
   }
   return (
-    <div className="w-full h-[100%] overflow-scroll flex px-[4px] py-[5px]">
-      <div className="projects_namea w-[25%]">
-        <ul onClick={renderProjects}>
-          <li>little tools</li>
+    <div className="w-full h-[100%] overflow-scroll flex py-[5px]">
+      <div className="projects_name w-[25%]">
+        <ul onClick={renderProjects} className="flex flex-col gap-[8px]">
+          <li className="projectActive">little tools</li>
+          <li>megh visuals</li>
         </ul>
       </div>
-      <div className="projectsPreview w-[75%] overflow-scroll h-[200px]">
-        <div className="preview_name">
-          <h1>little tools</h1>
-        </div>
-        <div className="weap">
-          <ul>
-            <li>Vanilla javascript, tailwind, GSAP</li>
-          </ul>
-        </div>
-        <button className="border-[0.5px] border-gray-300 px-[5px] text-gray-300 py-[2px] hover:bg-pink-300 hover:text-white">
-          visit
-        </button>
-
-        <div className="discription">
-          <p>
-            -- A site where you will get all your daily uses small tools like
-            img background remover, URL shortner,img to pdf convertor, css
-            shadow generator, and 10+ more tolls
-          </p>
-        </div>
-        <div className="points">
-          <ul>
-            <li className="flex gap-[5px]">
-              <span className="text-pink-300">&bull;</span>
-              <p>All tools in this site is created by me</p>
-            </li>
-          </ul>
-        </div>
-
-        <div className="func">
-          <ul>
-            <li>
-              <span className="text-green-300">&bull;</span>
-              <p>
-                you can add your fav tool in favTools page which u can also
-                remove from favTools page
-              </p>
-            </li>
-            <li>
-              <span className="text-green-300">&bull;</span>
-              <p>
-                you can add your fav tool in favTools page which u can also
-                remove from favTools page
-              </p>
-            </li>
-            <li>
-              <span className="text-green-300">&bull;</span>
-              <p>you can search tools by search bar</p>
-            </li>
-            <li>
-              <span className="text-green-300">&bull;</span>
-              <p>this is also responsive for small devices</p>
-            </li>
-          </ul>
-        </div>
+      <div className="projectsPreview w-[75%] overflow-scroll px-[6px] h-[200px] flex flex-col gap-[10px]">
+        {/* {console.log(prev)} */}
+        <ProjectPreview {...prev} />
       </div>
     </div>
   );

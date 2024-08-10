@@ -1,0 +1,55 @@
+
+  <div className="preview_name">
+    <h1>{prev.name}</h1>
+  </div>
+  <div className="weap">
+    <ul className="flex gap-[5px] text-wrap flex-wrap">
+      {
+        weap.map((weapons ,index)=>{
+          return(
+           <li key={index}>{weapons},</li>
+          )
+        })
+      }
+
+    </ul>
+  </div>
+  <button className="w-[max-content] border-[0.5px] border-gray-300 px-[5px] text-gray-300 py-[2px] hover:bg-pink-300 hover:text-white">
+    <a href={prev.link} className="w-full h-full ">visit</a>
+  </button>
+
+  <div className="discription mt-[8px]">
+    <p>-- 
+      {
+        prev.description
+      }
+    </p>
+  </div>
+  <div className="points">
+    <ul>
+      {
+        point.map((poin, inde)=>{
+          return  <li className="">
+            <span className="text-pink-300">&bull;</span>
+            <p key={inde}>{poin}</p>
+          </li>
+        })
+      }
+
+    </ul>
+  </div>
+
+  <div className="func">
+    <ul>
+      {
+        funcs.map((func , index)=>{
+               return <li className="">
+            <span className="text-green-300">&bull;</span>
+            <p>
+              {func}
+            </p>
+          </li>
+        })
+      }
+    </ul>
+  </div>

@@ -15,5 +15,23 @@ export  const projectsData = [
       "this is also responsive for small devices",
       "you can search tools by search bar"
     ]
+  },
+  {
+    name: "megh visuals",
+    weapons: [
+      "vanila javascript","tailwind","GSAP"
+    ],
+    description: "A animated website for an editing agency",
+    link: "https://littletools28.netlify.app/",
+    points:[
+      "in this project i tried to show my GSAP animation skill","well this project is a little bit old so now i can do much better than this website"
+    ],
+    functions:[
+     
+      "this is also responsive for small devices",
+     
+    ]
   }
 ]
+
+export const randColor = ["#FF69B4" , "#7FFFD4","#FDDA0D" , "#0096FF	"]
