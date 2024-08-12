@@ -78,7 +78,9 @@ img{
     /* align-items:center; */
     gap:5px;
 }
-
+.projectVisitBtn{
+    border-color:var(--random);
+}
 .projectVisitBtn:hover{
     background-color:var(--random)
 }
@@ -88,7 +90,29 @@ img{
 }
 .projects_name ul li{
     display:flex;
+    
     align-items:center;
     margin-bottom:3px;
     padding:3px 3px;
+}
+
+.slider{
+    position:fixed;
+    top:50% !important;
+    left:50%;
+  transform:translate3d(-50%,-50%,0) rotateX(0deg) rotateY(-25deg) rotateZ(-120deg);
+    transform-style:preserve-3d;
+    transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    user-select:none;
+}
+.card{
+    position:relative;
+    width: 8vw;
+    height:8vw;
+    transform:rotateX(20deg) rotateY(-10deg) rotateZ(130deg);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:4px;
+    overflow:hidden;
+    margin:-4vw 0;
+transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }

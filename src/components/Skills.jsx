@@ -1,24 +1,62 @@
-export function Skills(){
-  return(
-    <div className="w-full h-[200px] border-2 overflow-scroll">
-      <div className="wrapper min-h-[100%]">
-      <div className="image-Slider w-[25%] h-full">
-        <div className="img">
-          <img src="javascript-logo-E967E87D74-seeklogo.com.png"/>
-        </div>
-        <div className="img">
-          <img src="react.png"/>
-        </div>
-        <div className="img">
-          <img src="Python-Software-Foundation-Emblem.png"/>
-        </div> <div className="img">
-          <img src="django.png"/>
-        </div>
-        <div className="img-selector">
-        </div>
+import { useState, useEffect } from "react";
+import { imgData, imgFullData } from "../../skillImageData";
+// import { useState , useEffect } from `react`
+export function Skills() {
+  const [cards, setCards] = useState([]);
+  const [imgDet, setImgDet] = useState("");
+  const [skiName, setSkiName] = useState("");
+
+  const handleMouseOver = (e) => {
+    e.currentTarget.style.left = "15%";
+    console.log(e.target.tagName);
+    if (e.target.tagName === "IMG") {
+      let lilInfo = imgFullData[e.target.parentElement.id - 3];
+      console.log(lilInfo);
+      setImgDet(lilInfo.det);
+      setSkiName(lilInfo.name);
+    }
+  };
+  const handleMouseOut = (e) => {
+    e.currentTarget.style.left = "0%";
+    setImgDet("")
+    setSkiName('')
+  };
+  useEffect(() => {
+    const newlyCards = imgFullData.map((imgData, index) => ({
+      id: index + 1,
+      imgSrc: imgData["sor"],
+      imgDet: imgData["det"],
+    }));
+    setCards(newlyCards);
+
+  }, []);
+  return (
+    <div className="h-[60vh] overflow-hidden">
+ <p className="w-[50%] h-[20vh] text-[1.8vw] text-white mt-[4px]">
+   Things I'm <span className="text-blue-300 text-[1.9vw]">good</span> at
+   skills, interests, passion and hobbies
+ </p>
+      
+      <div className="slider">
+        {cards.map((card) => (
+          <div
+            id={card.id + 2}
+            key={card.id}
+            className="card"
+            onMouseOver={handleMouseOver}
+            onMouseLeave={handleMouseOut}
+          >
+            <img src={card.imgSrc} alt={`img${card}`} />
+          </div>
+        ))}
       </div>
-      <div className="imgPreview w-[75%] h-[max-content]"> </div>
+
+      <div className="dets absolute bottom-0 right-[2vw] w-[40%] h-[20vh] overflow-hidden">
+        <h1 className="text-[12px] skillName">{skiName}</h1>
+        <div className="skillDetail">
+          <p className="text-[1.1vw]">{imgDet} </p>
+        </div>
       </div>
     </div>
-  )
+  );
 }

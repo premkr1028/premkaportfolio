@@ -1,5 +1,13 @@
 {
   "files": {
+    "skillImageData.js": [
+      {
+        "id": "72762ba5-db1b-4f6a-a643-c51b38b93785",
+        "line": 2,
+        "version": 597,
+        "index": 222
+      }
+    ],
     "src/components/Nav.jsx": [
       {
         "id": "510c3a6a-3fe3-4ffe-99bf-fe090c8c65d7",
@@ -14,6 +22,14 @@
         "line": 45,
         "version": 3686,
         "index": 1694
+      }
+    ],
+    "src/components/Skills.jsx": [
+      {
+        "id": "d7614553-610e-4006-95a3-5bcac696e64f",
+        "line": 9,
+        "version": 3062,
+        "index": 314
       }
     ]
   }

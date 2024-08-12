@@ -1,0 +1,10 @@
+
+const handleMouseOver = (e) => {
+  console.log(e.target);
+  // setImgDet("megha")
+ 
+};
+const handleMouseOut = (e) => {
+  setImgDet("");
+  setSkiName("");
+};

@@ -29,10 +29,11 @@ export function ProjectPreview(props) {
         </a>
       </button>
 
-      <div className="discription mt-[8px]">
-        <p>
-          --
-          {props.description}
+      <div className="discription mt-[8px] " >
+
+        <p className="">
+        --&nbsp;
+           {props.description}
         </p>
       </div>
       <div className="points">
