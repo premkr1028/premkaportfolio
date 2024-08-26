@@ -39,7 +39,7 @@ export function Skills() {
   }, []);
   return (
     <div className="skillCont h-[60vh] overflow-hidden">
- <p className="skillQue w-[50%] h-[20vh] text-[1.8vw] text-white mt-[4px]">
+ <p className="skillQue w-[50%] h-[20vh] sm:text-[1.8vw] text-[20px] text-white mt-[4px]">
    Things I'm <span className="text-blue-300 text-[20px]">good</span> at
    skills, interests, passion and hobbies
  </p>

@@ -7,7 +7,7 @@ let [smBoxs, setSmBoxes] = useState([])
  
   useEffect( () =>{
     let smBoxs = []
-    for(let i = 0; i < 100; i++){
+    for(let i = 0; i < 500; i++){
       smBoxs.push(
         <div className="smBox" key={i}></div>
       )
