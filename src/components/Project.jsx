@@ -21,21 +21,24 @@ export function Project() {
         r.style.setProperty("--random", `${randomColor}`);
         /// seting active list
 
-        document.querySelector(".projectActive").classList.remove("projectActive")
+        document
+          .querySelector(".projectActive")
+          .classList.remove("projectActive");
 
- e.target.classList.add("projectActive")
+        e.target.classList.add("projectActive");
       }
     });
   }
   return (
-    <div className="w-full h-[100%] overflow-scroll flex py-[5px]">
+    <div className="pDiv w-full h-[100%] overflow-scroll flex py-[5px]">
       <div className="projects_name w-[25%]">
         <ul onClick={renderProjects} className="flex flex-col gap-[8px]">
           <li className="projectActive">little tools</li>
+          <li>draggable notepad</li>
           <li>megh visuals</li>
         </ul>
       </div>
-      <div className="projectsPreview w-[75%] overflow-scroll px-[6px] h-[200px] flex flex-col gap-[10px]">
+      <div className="projectsPreview w-[75%] overflow-scroll pl-[15px] px-[6px] h-[200px] flex flex-col gap-[10px]">
         {/* {console.log(prev)} */}
         <ProjectPreview {...prev} />
       </div>

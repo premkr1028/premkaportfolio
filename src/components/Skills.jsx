@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { imgData, imgFullData } from "../../skillImageData";
 // import { useState , useEffect } from `react`
@@ -16,6 +17,12 @@ export function Skills() {
       setSkiName(lilInfo.name);
     }
   };
+  const showDets = () =>{
+    if(window.innerHeight > window.innerWidth){
+      // return
+      document.getElementsByClassName("card").removeAttribute("onMouseLeave")
+    }
+  }
   const handleMouseOut = (e) => {
     e.currentTarget.style.left = "0%";
     setImgDet("")
@@ -31,15 +38,16 @@ export function Skills() {
 
   }, []);
   return (
-    <div className="h-[60vh] overflow-hidden">
- <p className="w-[50%] h-[20vh] text-[1.8vw] text-white mt-[4px]">
-   Things I'm <span className="text-blue-300 text-[1.9vw]">good</span> at
+    <div className="skillCont h-[60vh] overflow-hidden">
+ <p className="skillQue w-[50%] h-[20vh] text-[1.8vw] text-white mt-[4px]">
+   Things I'm <span className="text-blue-300 text-[20px]">good</span> at
    skills, interests, passion and hobbies
  </p>
       
       <div className="slider">
         {cards.map((card) => (
           <div
+            onClick={showDets}
             id={card.id + 2}
             key={card.id}
             className="card"
@@ -60,3 +68,4 @@ export function Skills() {
     </div>
   );
 }
+

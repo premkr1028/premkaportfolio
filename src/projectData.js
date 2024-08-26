@@ -22,7 +22,7 @@ export  const projectsData = [
       "vanila javascript","tailwind","GSAP"
     ],
     description: "A animated website for an editing agency",
-    link: "https://littletools28.netlify.app/",
+    link: "https://meghvisuals.netlify.app/",
     points:[
       "in this project i tried to show my GSAP animation skill","well this project is a little bit old so now i can do much better than this website"
     ],
@@ -30,6 +30,22 @@ export  const projectsData = [
      
       "this is also responsive for small devices",
      
+    ]
+  },
+  {
+    name: "draggable notepad",
+    weapons: [
+      "vanila javascript","tailwind"
+    ],
+    description: "A simple app where u can add notes which u can move Btw this is just a practice project not a full website",
+    link: "https://codepen.io/prem-2810/pen/YzbvVZY",
+    points:[
+      "You can add multiple notes"
+    ],
+    functions:[
+
+      "notes are onle draggable by mouse when u click on them",
+
     ]
   }
 ]

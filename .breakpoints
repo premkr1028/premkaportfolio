@@ -4,7 +4,7 @@
       {
         "id": "72762ba5-db1b-4f6a-a643-c51b38b93785",
         "line": 2,
-        "version": 597,
+        "version": 2769,
         "index": 222
       }
     ],
@@ -19,17 +19,17 @@
     "src/components/Project.jsx": [
       {
         "id": "fa5270a1-7e61-4410-b1a5-9039b541aa27",
-        "line": 45,
-        "version": 3686,
-        "index": 1694
+        "line": 48,
+        "version": 3809,
+        "index": 1777
       }
     ],
     "src/components/Skills.jsx": [
       {
         "id": "d7614553-610e-4006-95a3-5bcac696e64f",
-        "line": 9,
-        "version": 3062,
-        "index": 314
+        "line": 10,
+        "version": 3457,
+        "index": 315
       }
     ]
   }

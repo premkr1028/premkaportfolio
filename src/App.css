@@ -25,12 +25,7 @@ addGmailRes ul li, p{
 .addGmailRes ul{
     flex-wrap:wrap;
 }
-@media(max-width:360px){
-    nav ul{
-        /* display:grid !important;
-        grid-template-columns:repeat(2, auto) !important; */
-    }
-}
+
 nav{
     flex-wrap:wrap;
 }
@@ -115,4 +110,159 @@ img{
     overflow:hidden;
     margin:-4vw 0;
 transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul .sc a span{
+    color:gray;
+    font-size:2vw;
+    position:relative;
+    display:block;
+}
+
+ul .sc span:before{
+    width:0;
+    color:white;
+    overflow:hidden;
+    position:absolute;
+    content:attr(data-text);
+    transition:all 0.5s cubic-bezier(0.84, 0, 0.08 , 0.99);
+}
+ul .sc span:hover:before{
+    width:100%;
+}
+
+@media(max-width:640px){
+
+    main{
+        width:90vw !important;
+        margin-top:20vh !important;
+    }
+    nav{
+        display:flex ;
+    }
+    nav li a span{
+        height:25px !important;
+       padding:0;
+        font-size:9px !important;
+    }
+    nav li{
+        padding:0;
+        height:25px;
+        padding-left:4px;
+        padding-right:4px;
+    }
+
+.skillQue{
+margin-left:13% !important;
+    height: max-content;
+    width:90% !important;
+    font-size:16px;
+    text-wrap:wrap;
+    padding:5px;
+    span{
+        font-size:18px;
+    }
+}
+    .slider{
+        overflow:scroll;
+        position:relative  !important;
+        transform-style: pre-wrap !important;
+        transform:scale(0.9) !important;
+        left:0;
+        display:flex !important;
+        flex-direction:column;
+        /* grid-auto-columns:repeat(3, auto) !important; */
+        justify-content:center;
+        gap: ;
+        flex-wrap: wrap;
+        
+        /* background-color:red; */
+        top:0 !important;
+        .card{
+            user-select:none;
+            position:relative;
+            margin:0 !important;
+            overflow: none; 
+            width:23vw;
+height:23vw;
+            margin:8px !important;
+    transform:rotateZ(0deg);
+            top:0 !important;
+            
+        }
+    }
+.skillCont{
+    overflow:scroll;
+}
+    .dets{
+        background-color:black;
+        font-size: 15px;
+        padding:5px;
+        width: 50%;
+        height:max-content !important;
+        border-radius:5px;
+*{
+    font-size:10px;
+}
+    }
+        .contactPage{
+            h1,h2{
+                *{
+                    font-size:22px;
+                }
+                font-size:20px ;
+            }
+            ul li a span{
+                font-size:10px;
+                width:100%;
+                /* background-color:red; */
+            }
+            .linksGifs{
+                flex-direction:column;
+                gap:10px;
+            }
+       
+
+        }
+    .linksGifs ul li a span{
+         font-size:15px !important;
+    }
+}
+
+/* /// */
+.linksGifs ul{
+    display:grid !important;
+    grid-auto-columns:repeat(3, auto) !important;
+    /* flex-wrap:wrap; */
+    
+}
+.linksGifs ul li{
+ 
+    display:flex;
+    /* flex:1 !important; */
+    /* border:0.1px solid gray; */
+    /* display:flex; */
+    justify-content:center;
+    padding:5px;
+}
+
+.projectsPreview::-webkit-scrollbar, .pDiv::-webkit-scrollbar, .skillCont::-webkit-scrollbar, .slider::-webkit-scrollbar{
+    display:none;
+}
+
+.contactPage{
+*{
+    overflow-x:hidden;
+}
+}
+
+
+.smBox{
+    width:30px;
+    height:30px;
+    opacity:0.3;
+    border:0.1px solid lightgray;
+}
+.back{
+    flex-wrap:wrap;
 }

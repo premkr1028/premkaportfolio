@@ -1,3 +1,7 @@
+// import { transform } from "framer-motion";
+// import transition from "../transition";
+
+
 export function About() {
   return (
     <div className="w-full flex flex-col h-full gap-[10px] ">
@@ -12,7 +16,7 @@ export function About() {
       </div>
 
     <p className="text-[12px] w-full">
-      I'm a Tech enthusiast passionate about building tech stuffs. You'll often find me building side-projects that I fail to maintain.
+      I'm a Tech enthusiast passionate about building tech stuffs. I have a very good  understanding of frontEnd Dev and right now i m exploring or learning backend.Btw You'll often find me building side-projects that I fail to maintain.
     </p>
       <div className="flex gap-[6px] flex-wrap">
       <p className="text-nowrap">you can find me @</p>
@@ -45,3 +49,5 @@ export function About() {
     </div>
   );
 }
+
+// export default transition(About)

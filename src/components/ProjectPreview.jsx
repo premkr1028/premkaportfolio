@@ -9,7 +9,7 @@ export function ProjectPreview(props) {
   console.log(props["functions"])
   return (
     <>
-      <div className="preview_name">
+      <div className="preview_name mt-[10px]">
         <h1>{props.name}</h1>
       </div>
       <div className="weap">
