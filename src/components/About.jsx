@@ -11,7 +11,7 @@ export function About() {
           <li>|</li>
           <li>premkumarbalmiki088@gmail.com</li>
           <li>|</li>
-          <li><a>resume</a></li>
+          <li className="text-rose-300 hover:scale-[1.1] duration-200 hover:text-[#FF69B4]"><a href="premResume.pdf" download>resume</a></li>
         </ul>
       </div>
 
