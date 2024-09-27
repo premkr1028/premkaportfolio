@@ -110,6 +110,19 @@ img{
     overflow:hidden;
     margin:-2.8vw 0;
 transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display:flex !important;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    img{
+        width:100%;
+        object-fit:center;
+        /* background-color:red; */
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+    }
 }
 
 ul .sc a span{
